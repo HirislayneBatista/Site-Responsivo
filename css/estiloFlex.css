@@ -1,0 +1,125 @@
+/* Estilo base para todos os dispositivos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+ 
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* border: 2px solid red;  */
+}
+
+/*ESTILOS PARAOCABEÇALHO*/
+.header {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 10%;
+    /* border-bottom: 2px solid red; */
+    background-color: rgb(127, 202, 228); /* Cor inicial para a header */
+}
+
+.logo img{
+    display: block;        /* Garante o alinhamento correto */
+    width: 15%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    margin: 10px;          /* Espaçamento ao redor da imagem */
+}
+
+.navbar {
+    display: flex;               /* Exibe os links em linha */
+    justify-content: center;     /* Centraliza os links */
+    gap: 20px;                   /* Espaçamento entre os links */
+    background-color: #888585;      /* Cor de fundo do navbar */
+    padding: 10px 0;             /* Espaçamento interno vertical */
+}
+
+.navbar a {
+    text-decoration: none;  /*Remover sublinhado dos links*/
+    color: black;
+    font-size: 15px;
+    padding: 5px 10px;           /*Espaçamento interno dos links*/
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;      /* Cor de fundo ao passar o mouse */
+    color: #ddd;                 /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Quando o mouse passar sobre aumenta 10% de tamanho */
+}
+
+
+/*ESTILOS PARA O CONTEUDO*/
+/* .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+} */
+.content {
+    padding: 0px; /* Adicionar espaçamento interno ao redor do conteúdo */
+    margin: 10px 0; /* Adiciona espaçamento externona parte superior e inferior */
+    text-align: center; /* Centraliza o texto dentro da seção */
+  }
+
+.main h2 {
+    font-size: 40px; /* Define o tamanho da fonte do título como 2.5 vezes o tamanho padrão */
+    color: #333; /* Define a cor do texto como um cinza escuro */
+    margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
+}
+
+.main p {
+    font-size: 20px; /* Define o tamanho da fonte do parágrafo */
+    color: #333; /* Define a cor do texto como um cinza claro */
+    font-weight: bold;  /*Deixa o texto em negrito*/
+    line-height: 1.6; /* Define o espaçamento entre as linhas do texto para melhorar a legibilidade */
+    margin-bottom: 10px; /*Adiciona espaçamento abaixo do parágrafo*/
+}
+
+/*estilo para as imagens*/
+.content .imagens {
+    display: flex; /* Utiliza Flexbox para organizar os itens na horizontal */
+    justify-content: space-evenly; /* Centraliza os itens com espaçamentos iguais entre itens e laterais*/
+    align-items: center;
+    flex-wrap: wrap; /*Permite que as imagens se movam para a linha seguinte em telas menores*/
+    margin: 0px 0px 100px 0px; /* Adiciona um espaçamento do container imagens */
+    padding: 50px 0px; /* Aumenta o espaço no topo e na parte inferior do container de imagens */
+    background-color: salmon;
+}
+
+.content .image-text {
+    font-size: 16px; /* Define o tamanho da fonte para o texto */
+    color: #333; /* Cor do texto (cinza escuro) */
+    text-align: center; /* Centraliza o texto abaixo das imagens */
+    margin-top: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+/*estilo para cada imagem*/
+.content .imagens img {
+    width: auto; /* Mantem a proporcao das imagens */
+    height: auto; /* Mantém a proporção das imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor da imagem */
+    transition: transform 0.3s ease; /* Cria uma transição suave para o efeito de hover */
+    margin: 30px 0px 0px 0px;
+}
+
+.content .imagens img:hover {
+    transform: scale(1.1); /* Quando o mouse passar sobre a imagem, ela aumenta 10% de tamanho */
+}
+
+/*ESTILOS PARA O RODAPÉ*/
+.footer {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+    background-color: rgb(127, 202, 228); /* Cor inicial para a header */
+    margin: 0;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* test */

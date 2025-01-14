@@ -153,3 +153,57 @@ body {
     bottom: 0; /* Fixa o rodapé na parte inferior */
     width: 100%; /* Ocupa toda a largura */
 }
+
+/*RESPONSIVIDADE*/
+/* Estilos para desktops */
+@media (min-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+}
+ 
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+    }
+    .content {
+        flex-direction: column;
+        background-color: #d3d3f3; /* Cor para a content em tablets */
+    }
+    .content .sidebar {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        height: 50px; /*horizontal no tablet */
+        border-right: none;
+        border-bottom: 2px solid red;
+        background-color: #c3e6c3; /* Cor em tablets */
+    }
+}
+
+/* Estilos para celulares */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    .content {
+        flex-direction: column;
+        background-color: #f3e6d3; /* Cor para a content em celulares */
+    }
+    .content .sidebar {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        height: 50px; /* Sidebar horizontal no celular */
+        border-right: none;
+        border-bottom: 2px solid red;
+        background-color: #e6f3c3; /* Cor para a sidebar em celulares */
+    }
+    .header {
+        background-color: #b3d9ff; /* Cor para a header em celulares */
+    }
+    .footer {
+        background-color: #ffb3b3; /* Cor para o footer em celulares */
+    }
+}

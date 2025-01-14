@@ -12,7 +12,7 @@ body {
     /* border: 2px solid red;  */
 }
 
-/*ESTILOS PARAOCABEÇALHO*/
+/*CABEÇALHO*/
 .header {
     flex-grow: 0;
     flex-shrink: 0;
@@ -51,7 +51,7 @@ body {
 }
 
 
-/*ESTILOS PARA O CONTEUDO*/
+/*CONTEUDO*/
 /* .content{
     display: flex;
     flex-direction: column;
@@ -59,19 +59,19 @@ body {
     align-items: center;
     background-color: lightblue;
 } */
-.content {
+.main-content {
     padding: 0px; /* Adicionar espaçamento interno ao redor do conteúdo */
     margin: 10px 0; /* Adiciona espaçamento externona parte superior e inferior */
     text-align: center; /* Centraliza o texto dentro da seção */
   }
 
-.main h2 {
+.main-content h2 {
     font-size: 40px; /* Define o tamanho da fonte do título como 2.5 vezes o tamanho padrão */
     color: #333; /* Define a cor do texto como um cinza escuro */
     margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
 }
 
-.main p {
+.main-content p {
     font-size: 20px; /* Define o tamanho da fonte do parágrafo */
     color: #333; /* Define a cor do texto como um cinza claro */
     font-weight: bold;  /*Deixa o texto em negrito*/
@@ -79,10 +79,13 @@ body {
     margin-bottom: 10px; /*Adiciona espaçamento abaixo do parágrafo*/
 }
 
-/*estilo para as imagens*/
-.content .imagens {
+/*IMAGENS*/
+.cards-images {
     display: flex; /* Utiliza Flexbox para organizar os itens na horizontal */
-    justify-content: space-evenly; /* Centraliza os itens com espaçamentos iguais entre itens e laterais*/
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 60%;
+    justify-content: space-evenly; /*Centraliza os itens com espaçamentos iguais entre itens e laterais*/
     align-items: center;
     flex-wrap: wrap; /*Permite que as imagens se movam para a linha seguinte em telas menores*/
     margin: 0px 0px 100px 0px; /* Adiciona um espaçamento do container imagens */
@@ -90,36 +93,43 @@ body {
     background-color: salmon;
 }
 
-.content .image-text {
-    font-size: 16px; /* Define o tamanho da fonte para o texto */
-    color: #333; /* Cor do texto (cinza escuro) */
+.cards-images .cards{
+    display: flex; /* Utiliza Flexbox para organizar os itens na horizontal */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 300px;
     text-align: center; /* Centraliza o texto abaixo das imagens */
+    align-items: center;
+    height: 250px;
     margin-top: 15px; /* Espaçamento entre a imagem e o texto */
+    font-size: 16px; /* Define o tamanho da fonte para o texto */
+    font-weight: strong;
+    border-radius: 10px;
+    color: white; /* Cor do texto*/
+    background-color: #888585;  /*Cor de fundo*/
 }
 
-/*estilo para cada imagem*/
-.content .imagens img {
+.cards img {
     width: auto; /* Mantem a proporcao das imagens */
     height: auto; /* Mantém a proporção das imagens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor da imagem */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Sombra ao redor da imagem */
     transition: transform 0.3s ease; /* Cria uma transição suave para o efeito de hover */
-    margin: 30px 0px 0px 0px;
+    /* margin: 30px 0px 0px 40px; */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
 }
 
-.content .imagens img:hover {
+.cards-images img:hover {
     transform: scale(1.1); /* Quando o mouse passar sobre a imagem, ela aumenta 10% de tamanho */
 }
 
-/*ESTILOS PARA O RODAPÉ*/
+/*RODAPÉ*/
 .footer {
-    display: flex;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 0;
-    background-color: rgb(127, 202, 228); /* Cor inicial para a header */
-    margin: 0;
-    align-items: center;
-    font-size: 12px;
+    background-color: rgb(127, 202, 228); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno em cima e embaixo */
+    font-size: 14px; /* Tamanho da fonte */
+    position: relative;
+    bottom: 0; /* Fixa o rodapé na parte inferior */
+    width: 100%; /* Ocupa toda a largura */
 }
-
-/* test */

@@ -80,47 +80,67 @@ body {
 }
 
 /*IMAGENS*/
+.cards{
+    display: flex;  /*utiliza Flexbox para organizar os itens na horizontal*/
+    /* flex-grow: 0; */
+    /* flex-shrink: 0; */
+    flex-basis: 300px;
+    padding: 30px;
+    /* margin: 30px; */
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(247, 208, 208);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold
+}
 .cards-images {
     display: flex; /* Utiliza Flexbox para organizar os itens na horizontal */
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 60%;
     justify-content: space-evenly; /*Centraliza os itens com espaçamentos iguais entre itens e laterais*/
-    align-items: center;
+    align-items: start;
+    padding: 50px 0px;
     flex-wrap: wrap; /*Permite que as imagens se movam para a linha seguinte em telas menores*/
-    margin: 0px 0px 100px 0px; /* Adiciona um espaçamento do container imagens */
-    padding: 50px 0px; /* Aumenta o espaço no topo e na parte inferior do container de imagens */
     background-color: salmon;
+    margin-bottom: 100px;
 }
-
-.cards-images .cards{
-    display: flex; /* Utiliza Flexbox para organizar os itens na horizontal */
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 300px;
-    text-align: center; /* Centraliza o texto abaixo das imagens */
-    align-items: center;
-    height: 250px;
-    margin-top: 15px; /* Espaçamento entre a imagem e o texto */
-    font-size: 16px; /* Define o tamanho da fonte para o texto */
-    font-weight: strong;
+#desktops {
+    /* flex: 100px 100px; */
+    padding: 20px;
     border-radius: 10px;
-    color: white; /* Cor do texto*/
-    background-color: #888585;  /*Cor de fundo*/
-}
-
-.cards img {
-    width: auto; /* Mantem a proporcao das imagens */
-    height: auto; /* Mantém a proporção das imagens */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Sombra ao redor da imagem */
+    background-color: #FF7D55;
     transition: transform 0.3s ease; /* Cria uma transição suave para o efeito de hover */
-    /* margin: 30px 0px 0px 40px; */
-    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
 }
 
-.cards-images img:hover {
-    transform: scale(1.1); /* Quando o mouse passar sobre a imagem, ela aumenta 10% de tamanho */
+#smartphones {
+    flex: 100px 100px;              /* Largura fixa de 300px para cada item */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FF9E7F;
+    transition: transform 0.3s ease; /* Cria uma transição suave para o efeito de hover */
 }
+
+#tablets {
+    flex: 100px 100px;              /* Largura fixa de 300px para cada item */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #59CFCC;
+    transition: transform 0.3s ease; /* Cria uma transição suave para o efeito de hover */
+}
+
+#desktops:hover,
+#smartphones:hover,
+#tablets:hover {
+    transform: scale(1.1);
+}
+
+.cards img{
+    width: auto; /* Mantem a proporcao das imagens */
+    height: 150px; /* alinhar, devido a imagens terem proporcoes diferentes */
+}
+
 
 /*RODAPÉ*/
 .footer {
